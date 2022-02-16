@@ -1,0 +1,72 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: linear-gradient(rgba(252, 251, 251, 0.5), rgba(10, 10, 10, 0.5)), url('memo2.jpg');
+    background-position: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+.container {
+    width: 600px;
+    height: 600px;
+    margin: 20px auto;
+    box-shadow: 0 0 8px #ddd;
+}
+.box {
+    width: 100px;
+    height: 100px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    float: left;
+    position: relative;
+}
+.selected {
+    width: 100px;
+    height: 100px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    float: left;
+    position: relative;
+}
+.front {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    background: linear-gradient(rgba(10, 10, 10, 0.7), rgba(235, 7, 7, 0.7));
+    backface-visibility: hidden;
+    transition: .9s all;
+    cursor: pointer;
+}
+.back {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    backface-visibility: hidden;
+    transition: .9s all;
+    transform: perspective(900px) rotateY(180deg);
+    background-color: rgb(17, 4, 29);
+    color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 38px;
+}
+.controler{
+    margin: 10px auto 0;
+    text-align: center;
+}
+.controler .btn{
+    color: white;
+    background: linear-gradient(rgba(10, 10, 10, 0.7), rgba(235, 7, 7, 0.7));
+    width: 15%;
+    font-size: 50px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.controler .btn:hover{
+    color: white;
+    background-color: rgb(17, 4, 29);
+    transition: .4s ease-in;
+}
